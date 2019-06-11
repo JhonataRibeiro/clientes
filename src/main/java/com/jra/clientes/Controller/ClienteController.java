@@ -2,10 +2,14 @@ package com.jra.clientes.Controller;
 
 import com.jra.clientes.Model.Cliente;
 import com.jra.clientes.Service.ClienteService;
+import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.ws.Response;
 import java.util.List;
 
 /**
@@ -25,7 +29,22 @@ public class ClienteController {
         return clienteService.listar();
     }
 
+    @GetMapping("/{nome}")
+    public List<Cliente> procurarPelo(@PathVariable String nome){
+        return clienteService.procurarPelo(nome);
+    }
+
     @PostMapping()
     public Cliente inserir(@RequestBody Cliente cliente){return clienteService.inserir(cliente);}
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Cliente> exlcuir(@PathVariable Integer id){
+        try {
+            clienteService.excluir(id);
+        } catch (NotFound notFound) {
+            return new ResponseEntity<Cliente>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<Cliente>(HttpStatus.NO_CONTENT);
+    }
 
 }
