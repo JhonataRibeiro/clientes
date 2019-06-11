@@ -1,9 +1,12 @@
 package com.jra.clientes.Controller;
 
+import com.jra.clientes.Model.Cliente;
+import com.jra.clientes.Service.ClienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author jribeiro
@@ -14,8 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/clientes")
 public class ClienteController {
 
+    @Autowired
+    ClienteService clienteService;
+
     @GetMapping()
-    public String listar(){
-        return "Listar Cliente";
+    public List<Cliente> listar(){
+        return clienteService.listar();
     }
+
+    @PostMapping()
+    public Cliente inserir(@RequestBody Cliente cliente){return clienteService.inserir(cliente);}
+
 }
