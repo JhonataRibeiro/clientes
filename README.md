@@ -82,7 +82,7 @@ Agora vamos descobrir onde o serviço está rodando:
 
 e voa-lá:
 
-Observe que o serviço está rodando em uma porta específica do kubernates, ou seja, nosso container está sendo executado pelo kubernate. Neste caso, podemos especifícar várias configurações para o cluster.
+Observe que o serviço está rodando em uma porta específica do kubernates, ou seja, nosso container está sendo executado pelo kubernate. Neste caso, podemos especifícar várias estratégias para o cluster, exemplo: Eu posso dizer que essa aplicação deve rodar com 100 pods que seriam os containers. Se por acaso um desses containers falhar, automaticamente o kubernates irá levantar outro container. Existe também a checagem de saúde desses containers, dependendo da configuração, um container pode ser substituido por outro automaticamente.
 
     http://192.168.99.100:30557
     
