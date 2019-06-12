@@ -71,7 +71,8 @@ E na saida teremos algumas informações. Umas delas, que o serviço está runni
     clientes-banco-java-798bb8b448-bn8xg   1/1     Running   0          3m44s
     
     
-    ![alt text](https://github.com/JhonataRibeiro/tmp-img/blob/master/Captura%20de%20tela%20de%202019-06-12%2002-53-28.png)
+   
+   ![alt text](https://github.com/JhonataRibeiro/tmp-img/blob/master/Captura%20de%20tela%20de%202019-06-12%2002-53-28.png)
 
 
 
