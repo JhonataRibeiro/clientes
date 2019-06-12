@@ -37,6 +37,11 @@ public class ClienteController {
     @PostMapping()
     public Cliente inserir(@RequestBody Cliente cliente){return clienteService.inserir(cliente);}
 
+    @PutMapping()
+    public ResponseEntity editar(@RequestBody Cliente cliente) {
+        return new ResponseEntity<>(clienteService.editar(cliente), HttpStatus.OK);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Cliente> exlcuir(@PathVariable Integer id){
         try {

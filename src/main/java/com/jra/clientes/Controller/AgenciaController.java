@@ -27,14 +27,19 @@ public class AgenciaController {
         return agenciaService.listar();
     }
 
-    @GetMapping("/{nome}")
-    public List<Agencia> procurarPelo(@PathVariable String agencia){
-        return agenciaService.procurarPela(agencia);
+    @GetMapping("/{nomeAgencia}")
+    public List<Agencia> procurarPelo(@PathVariable String nomeAgencia){
+        return agenciaService.procurarPelo(nomeAgencia);
     }
 
     @PostMapping()
     public Agencia inserir(@RequestBody Agencia agencia){
         return agenciaService.inserir(agencia);
+    }
+
+    @PutMapping()
+    public ResponseEntity editar(@RequestBody Agencia agencia) {
+        return new ResponseEntity<>(agenciaService.editar(agencia), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

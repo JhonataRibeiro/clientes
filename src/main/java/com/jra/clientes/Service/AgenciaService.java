@@ -32,7 +32,11 @@ public class AgenciaService {
         agenciaRepository.delete(agenciaRepository.findById(id).orElseThrow(NotFound::new));
     }
 
-    public List<Agencia> procurarPela(String agencia) {
-        return agenciaRepository.findOneByAgencia(agencia);
+    public Agencia editar(Agencia agencia) {
+        return agenciaRepository.save(agencia);
+    }
+
+    public List<Agencia> procurarPelo(String nomeAgencia) {
+        return agenciaRepository.findByNomeAgenciaContainingIgnoreCase(nomeAgencia);
     }
 }

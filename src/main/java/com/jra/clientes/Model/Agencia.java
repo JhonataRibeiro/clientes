@@ -22,6 +22,9 @@ public class Agencia {
     private String banco;
 
     @Column
+    private String nomeAgencia;
+
+    @Column
     private int agencia;
 
     @Column

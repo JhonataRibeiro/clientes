@@ -12,5 +12,5 @@ import java.util.List;
  */
 @Repository
 public interface AgenciaRepository extends JpaRepository<Agencia, Integer> {
-    List<Agencia> findOneByAgencia(String agencia);
+    List<Agencia> findByNomeAgenciaContainingIgnoreCase(String nomeAgencia);
 }

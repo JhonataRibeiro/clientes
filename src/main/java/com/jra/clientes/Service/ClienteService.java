@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 
@@ -34,6 +33,10 @@ public class ClienteService {
     }
 
     public List<Cliente> procurarPelo(String nome) {
-        return clienteRepository.findAllByNome(nome);
+        return clienteRepository.findByNomeContainingIgnoreCase(nome);
+    }
+
+    public Cliente editar(Cliente cliente) {
+        return clienteRepository.save(cliente);
     }
 }
