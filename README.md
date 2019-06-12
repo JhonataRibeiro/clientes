@@ -79,5 +79,7 @@ e voa-lá:
 Observe que o serviço está rodando em uma porta específica do kubernates, ou seja, nosso container está sendo executado pelo kubernate. Neste caso, podemos especifícar várias configurações para o cluster.
 
     http://192.168.99.100:30557
+    
+    
 
 
