@@ -40,7 +40,9 @@ A documentação do kubernates é bem simples e explicativa. Nesta página temos
 O minikube, como já dito anteriormente, vai nos  permitir criar o cluster.
  Para isso vamos startá-lo com o seguinte comando:
  
+ ```
      minikube start
+ ```
  
 Uma vez que ele foi startado, vamos rodar o seguinte comando, pegando como base o container que criamos para o desafio: 
 
