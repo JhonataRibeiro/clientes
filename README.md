@@ -81,5 +81,5 @@ Observe que o serviço está rodando em uma porta específica do kubernates, ou 
     http://192.168.99.100:30557
     
     
-
+![alt text](https://github.com/JhonataRibeiro/tmp-img/blob/master/Captura%20de%20tela%20de%202019-06-12%2002-56-22.png)
 
