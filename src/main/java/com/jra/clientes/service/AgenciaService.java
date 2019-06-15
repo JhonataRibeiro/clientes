@@ -1,11 +1,10 @@
-package com.jra.clientes.Service;
+package com.jra.clientes.service;
 
-import com.jra.clientes.Model.Agencia;
-import com.jra.clientes.Repository.AgenciaRepository;
+import com.jra.clientes.model.Agencia;
+import com.jra.clientes.repository.AgenciaRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

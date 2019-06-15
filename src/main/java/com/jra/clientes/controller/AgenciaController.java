@@ -1,7 +1,7 @@
-package com.jra.clientes.Controller;
+package com.jra.clientes.controller;
 
-import com.jra.clientes.Model.Agencia;
-import com.jra.clientes.Service.AgenciaService;
+import com.jra.clientes.model.Agencia;
+import com.jra.clientes.service.AgenciaService;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

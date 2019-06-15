@@ -1,4 +1,4 @@
-package com.jra.clientes.Config;
+package com.jra.clientes.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

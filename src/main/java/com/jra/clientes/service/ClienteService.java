@@ -1,7 +1,7 @@
-package com.jra.clientes.Service;
+package com.jra.clientes.service;
 
-import com.jra.clientes.Model.Cliente;
-import com.jra.clientes.Repository.ClienteRepository;
+import com.jra.clientes.model.Cliente;
+import com.jra.clientes.repository.ClienteRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;

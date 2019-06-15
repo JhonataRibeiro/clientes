@@ -1,6 +1,6 @@
-package com.jra.clientes.Repository;
+package com.jra.clientes.repository;
 
-import com.jra.clientes.Model.Agencia;
+import com.jra.clientes.model.Agencia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

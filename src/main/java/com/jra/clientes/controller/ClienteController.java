@@ -1,7 +1,7 @@
-package com.jra.clientes.Controller;
+package com.jra.clientes.controller;
 
-import com.jra.clientes.Model.Cliente;
-import com.jra.clientes.Service.ClienteService;
+import com.jra.clientes.model.Cliente;
+import com.jra.clientes.service.ClienteService;
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
 import java.util.List;
 
 /**

@@ -1,10 +1,9 @@
-package com.jra.clientes.Model;
+package com.jra.clientes.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * @author jribeiro
@@ -13,24 +12,21 @@ import java.util.List;
 @Data
 @Entity
 @NoArgsConstructor
-public class Cliente {
+public class Agencia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
-    private String nome;
+    private String banco;
 
     @Column
-    private String email;
+    private String nomeAgencia;
 
     @Column
-    private int cep;
+    private int agencia;
 
     @Column
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Agencia> agencias;
-
-
+    private int conta;
 }
